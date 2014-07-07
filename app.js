@@ -1,4 +1,7 @@
 $(document).ready(function() {
+$("#numberInput").click(function(){
+	alert("Enter a number between 1 and 100");
+});
 $("#numberInput").keyup(function(event) {
 		if(event.keyCode == 13) {
 			for(i=1; i<=100 ; i++){
