@@ -3,8 +3,10 @@ $("#numberInput").click(function(){
 	alert("Enter a number between 1 and 100");
 });
 $("#numberInput").keyup(function(event) {
+		var numberInput = $(this).val()
+		
 		if(event.keyCode == 13) {
-			for(i=1; i<=100 ; i++){
+			for(i=1; i<=numberInput ; i++){
 			if(i%15 == 0){
 				$("body").append("<p>" + "fizz buzz");
 			}
@@ -15,7 +17,7 @@ $("#numberInput").keyup(function(event) {
 				$("body").append("<p>" + "buzz");
 			}
 			else {
-				$("body").append("<p>" + i);
+				$("body").append("<p>" + i + "</p>");
 			}
 		}
 	}
